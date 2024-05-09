@@ -7,7 +7,7 @@ import DropdownMenu from './components/DropdownMenu';
 
 const events = [
   {
-    title: 'Big Meeting',
+    title: 'Meeting',
     start: new Date(2024, 4, 9, 10, 0), // Note: Months are 0-based in JavaScript Dates
     end: new Date(2024, 4, 9, 14, 30),
     allDay: false
