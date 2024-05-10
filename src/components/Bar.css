@@ -1,0 +1,46 @@
+.bar {
+    display: flex;
+    justify-content: space-between; /* Maintient l'espacement entre les éléments */
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.bar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    text-rendering: auto;
+}
+
+.bar-search input[type="search"] {
+    width: 100%; /* Utilise tout l'espace disponible dans le conteneur */
+    padding: 8px;
+}
+
+.bar-brand, .bar-profile {
+    flex: 1; /* Donne aux éléments de gauche et de droite un espace flexible équivalent */
+}
+
+.bar-profile a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: black;  /* Texte noir pour contraster avec le fond blanc */
+    text-decoration: none;  /* Aucun soulignage */
+}
+
+.bar-profile img {
+    width: 40px;  /* Taille de l'image du profil */
+    border-radius: 50%;  /* Rendre l'image ronde */
+}
+
+
+.bar a, .bar a:visited, .bar a:hover, .bar a:active {
+    color: white;  /* ou la couleur de votre choix */
+    text-decoration: none;  /* Supprime le soulignage */
+}
+
+.bar-search {
+    flex: 2; /* Donne deux fois plus d'espace à la barre de recherche */
+}

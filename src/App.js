@@ -6,6 +6,12 @@ import Calendar from './components/Calendar';
 
 import NotesPage from './components/NotesPage'; // Assurez-vous que le chemin d'importation est correct
 
+import Bar from './components/Bar'; // Assurez-vous que le chemin d'importation est correct
+
+
+
+
+
 function App() {
   const events = [
     {
@@ -19,6 +25,7 @@ function App() {
   return (
     <Router>
       <div>
+       <Bar />   
         <Navbar />
         <Routes>
           <Route path="/ecole" element={<Ecole />} />

@@ -8,7 +8,7 @@ const Navbar = () => {
     { label: "Notes et crédits", path: "/notes" },
     { label: "Absences", path: "/absences" },
     { label: "Évaluer l'enseignement", path: "/evaluation" },
-    { label: "Mes espaces Moodle", path: "/moodle" }
+    { label: "Mes Copies Scannées", path: "/copies" }
   ];
   const ecoleItems = [
     { label: "Programmes", path: "/programmes" },
