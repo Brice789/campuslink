@@ -1,0 +1,30 @@
+/* Conteneur global de la page */
+.page-container {
+    display: flex;
+    flex-direction: column; /* Organise les enfants en colonne */
+    align-items: center; /* Centre les enfants horizontalement */
+    justify-content: flex-start; /* Alignement vertical en haut */
+    height: 100vh; /* Utilise la hauteur complète de la fenêtre de visualisation */
+    padding-top: 20px; /* Espacement en haut */
+  }
+  
+  /* Conteneur spécifique pour le calendrier */
+  .calendar-container {
+    width: 73%; /* Prend 73% de la largeur disponible, centré pour esthétique */
+    margin: 20px 0; /* Marge en haut et en bas pour un peu d'espace */
+    padding: 3%; /* Padding intérieur pour ne pas coller au bord */
+    background-color: #ffffff; /* Fond blanc pour le calendrier */
+    border-radius: 20px; /* Coins arrondis pour un style doux */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ombre pour un effet de profondeur */
+  }
+  
+  /* Style pour l'entête "Bienvenue sur notre calendrier" */
+  .welcome-message {
+    width: 100%; /* Prend la largeur complète pour centrer le texte */
+    text-align: center; /* Centre le texte horizontalement */
+    font-size: 24px; /* Taille de police pour visibilité */
+    color: #333; /* Couleur de texte sombre pour contraste */
+    margin-top: 0; /* Pas de marge en haut pour coller au haut de la page */
+    padding: 10px 0; /* Un peu de padding autour du texte */
+  }
+  
