@@ -1,18 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './DropdownMenu.css';
 
-const DropdownMenu = () => {
+const Dropdown = ({ title, items }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Toggle dropdown visibility
+  const toggleDropdown = () => setIsOpen(!isOpen);
+
   return (
-    <div className="dropdown-content">
-      <a href="#">Notes et crédits</a>
-      <a href="#">Absences</a>
-      <a href="#">Évaluer l'enseignement</a>
-      <a href="#">Mes espaces Moodle</a>
-      <a href="#">LXP Learning XP</a>
-      <a href="#">Copies d'examen scannées</a>
-      <a href="#">Bulletins, certificats et factures...</a>
-    </div>
+    <li className="dropdown" onMouseEnter={() => setIsOpen(true)} onMouseLeave={() => setIsOpen(false)}>
+      <Link to="#" className="dropdown-toggle" onClick={toggleDropdown}>{title} <span>▼</span></Link>
+      {isOpen && (
+        <ul className="dropdown-content">
+          {items.map((item, index) => (
+            <li key={index}><Link to={item.path}>{item.label}</Link></li>
+          ))}
+        </ul>
+      )}
+    </li>
   );
 };
 
-export default DropdownMenu;
+export default Dropdown;

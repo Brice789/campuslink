@@ -5,6 +5,8 @@ import Navbar from './components/Navbar';
 import Calendar from './components/Calendar';
 import DropdownMenu from './components/DropdownMenu';
 
+import NotesPage from './components/NotesPage';
+
 const events = [
   {
     title: 'Meeting',
@@ -21,6 +23,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/ecole" element={<Ecole />} />
+          <Route path="/NotesPage" element={<NotesPage />} />
           <Route path="/calendar" element={<Calendar events={events} />} />  {/* Calendar route */}
           <Route path="/ecole" element={<DropdownMenu  />} />
         </Routes>

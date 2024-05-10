@@ -1,38 +1,33 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import DropdownMenu from './DropdownMenu';
+import Dropdown from './DropdownMenu';
 
 const Navbar = () => {
-  const [showDropdown, setShowDropdown] = useState(false);
-  const timeoutRef = useRef(null); // Référence pour stocker le timer
-
-  const handleMouseEnter = () => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current); // Annuler le timer existant si l'utilisateur revient sur le menu
-    }
-    setShowDropdown(true);
-  };
-
-  const handleMouseLeave = () => {
-    // Définir un délai avant de masquer le menu
-    timeoutRef.current = setTimeout(() => {
-      setShowDropdown(false);
-    }, 500); // 500 ms de délai avant que le menu disparaisse
-  };
+  const scolariteItems = [
+    { label: "Notes et crédits", path: "/notes" },
+    { label: "Absences", path: "/absences" },
+    { label: "Évaluer l'enseignement", path: "/evaluation" },
+    { label: "Mes espaces Moodle", path: "/moodle" }
+  ];
+  const ecoleItems = [
+    { label: "Programmes", path: "/programmes" },
+    { label: "Administration", path: "/administration" },
+    { label: "Ressources", path: "/ressources" }
+  ];
+  const associationItems = [
+    { label: "Événements", path: "/evenements" },
+    { label: "Projets", path: "/projets" },
+    { label: "Communauté", path: "/communaute" }
+  ];
 
   return (
     <nav>
       <ul>
         <li><Link to="/">Accueil</Link></li>
-        <li><Link to="/Calendar">Calendar</Link></li>
-        <li className="dropdown"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}>
-          <Link to="/scolarite">Scolarité</Link>
-          {showDropdown && <DropdownMenu />}
-        </li>
-        <li><Link to="/ecole">École</Link></li>
+        <Dropdown title="Scolarité" items={scolariteItems} />
+        <Dropdown title="École" items={ecoleItems} />
+        <Dropdown title="Association" items={associationItems} />
         <li><Link to="/stages">Stages et Alternances</Link></li>
       </ul>
     </nav>
