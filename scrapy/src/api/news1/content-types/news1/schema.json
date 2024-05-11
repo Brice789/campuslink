@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "news2",
+  "info": {
+    "singularName": "news1",
+    "pluralName": "news2",
+    "displayName": "News",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "OteriaLogo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Newsss": {
+      "type": "blocks"
+    },
+    "De": {
+      "type": "string"
+    }
+  }
+}
