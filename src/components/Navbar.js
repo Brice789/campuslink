@@ -12,24 +12,23 @@ const Navbar = () => {
   ];
   const ecoleItems = [
     { label: "Portail International", path: "/programmes" },
-    { label: "Dossier Administratif", path: "/administration" },
+    { label: "Carreer Center Alumni", path: "/administration" },
     { label: "Sales Libres", path: "/ressources" },
     { label: "Réagir aux discriminations", path: "/ressources" },
   ];
   const associationItems = [
     { label: "Plateforme des asssociations", path: "/communaute" },
     { label: "Événements & News", path: "/evenements" },
-    { label: "Participation aux journée porte ouvertes", path: "/projets" },
+    { label: "Inscription JPO", path: "/projets" },
   ];
   const stage = [
-    { label: "Confirmation de stage", path: "/evenements" },
+    { label: "Alternance et stage", path: "/evenements" },
     { label: "Suivi et évaluation", path: "/projets" },
-    { label: "Atelier CV", path: "/communaute" },
-    { label: "Carreer Center Alumni", path: "/communaute" }
+    { label: "Offre de Stage", path: "/communaute" }
   ];
   const aide = [
     { label: "Ressources", path: "/evenements" },
-    { label: "Portail des services : Incidents, demandes", path: "/projets" },
+    { label: "Portail des services : Incidents et demandes", path: "/projets" },
   ];
 
   return (
@@ -39,7 +38,7 @@ const Navbar = () => {
         <Dropdown title="Scolarité" items={scolariteItems} />
         <Dropdown title="École" items={ecoleItems} />
         <Dropdown title="Association" items={associationItems} />
-        <Dropdown title="Stages" items={stage} />
+        <Dropdown title="Alternance" items={stage} />
         <Dropdown title="Aide" items={aide} />
 
       </ul>

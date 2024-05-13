@@ -8,6 +8,9 @@ import Bar from './components/Bar';
 import Actualites from './components/Actualites';
 import Footer from './components/Footer'; // Assurez-vous que le chemin est correct
 
+import Absences from './components/Absences';
+import ProfilePage from './components/Profil';
+
 
 function App() {
 
@@ -48,7 +51,7 @@ function App() {
     },
     {
       id: 2,
-      title: "Journée Portes Ouvertes",
+      title: "Les entreprises partenaires",
       date: "2023-05-02",
       imageUrl: "/assets/Actu/events.jpeg"
     },
@@ -60,9 +63,15 @@ function App() {
     },
     {
       id: 4,
-      title: "Avoir des projets écologiques",
+      title: "Les mystères de la cryptologie",
       date: "2023-05-02",
-      imageUrl: "/assets/Actu/eco.jpeg"
+      imageUrl: "/assets/Actu/computer-security-lock-and-payment.jpg"
+    },
+    {
+      id: 6,
+      title: "E-Commerces et Cybersécurité",
+      date: "2023-05-02",
+      imageUrl: "/assets/Actu/gold-cyber-monday.jpg"
     },
     {
       id: 5,
@@ -70,12 +79,6 @@ function App() {
       date: "2023-08-02",
       imageUrl: "/assets/Actu/eco.jpeg"
     },
-    {
-      id: 6,
-      title: "Avoir des projets écologiques",
-      date: "2023-05-02",
-      imageUrl: "/assets/Actu/eco.jpeg"
-    }
   ];
 
   return (
@@ -87,7 +90,9 @@ function App() {
           <Route path="/" element={<HomePage events={events} news={news} />} />
           <Route path="/ecole" element={<Ecole />} />
           <Route path="/notes" element={<NotesPage />} />
+          <Route path="/absences" element={<Absences />} />
           <Route path="/actualites" element={<Actualites news={news} />} />
+          <Route path="/profile" element={<ProfilePage />} />
         </Routes>
         {/* <Footer />  */}
       </div>

@@ -4,15 +4,12 @@ import './Bar.css';
 
 // import profileIcon from '/public/assets/logo/profile-icon.webp';
 
-
 const Bar = () => {
     return (
         <nav className="bar">
             <div className="bar-brand">
                 <Link to="/">Oteria</Link>
-                {/* <img src=".../campuslink\assets\logo\logo400x400.jpg" alt="Logo de l'École" style={{ height: '50px' }} /> */}
             </div>
-
             <div className="bar-search">
                 <input type="search" placeholder="Rechercher une ressource..." />
             </div>
@@ -25,5 +22,4 @@ const Bar = () => {
         </nav>
     );
 };
-
 export default Bar;

@@ -2,15 +2,16 @@
     display: flex;
     justify-content: space-between; /* Maintient l'espacement entre les éléments */
     align-items: center;
-    padding: 10px 20px;
-}
+    padding: 1rem 20px; /* Augmente le padding pour un meilleur look */}
 
 .bar-brand {
-    font-size: 1.5em;
-    font-weight: bold;
-    text-decoration: none;
-    color: #ffffff;
-    text-rendering: auto;
+        flex: 1; /* Donne moins de place à la marque si nécessaire */
+        font-size: xx-large;
+}
+
+.bar-search {
+    flex: 2; /* Donne deux fois plus d'espace à la barre de recherche pour le centrage */
+    margin: 0 20px; /* Ajoute de l'espace autour de la barre de recherche */
 }
 
 .bar-search input[type="search"] {
@@ -18,27 +19,30 @@
     padding: 8px;
 }
 
-.bar-brand, .bar-profile {
-    flex: 1; /* Donne aux éléments de gauche et de droite un espace flexible équivalent */
+.bar-profile {
+    flex: 1; /* Donne autant d'espace que la marque mais peut être ajusté pour plus d'espace */
+    display: flex;
+    justify-content: flex-end; /* Alignement à droite */
 }
 
 .bar-profile a {
     display: flex;
     align-items: center;
-    gap: 10px;
-    color: black;  /* Texte noir pour contraster avec le fond blanc */
-    text-decoration: none;  /* Aucun soulignage */
+    gap: 10px; /* Espacement entre l'image et le texte */
+    color: white; /* Couleur du texte */
+    text-decoration: none;
 }
 
 .bar-profile img {
-    width: 40px;  /* Taille de l'image du profil */
-    border-radius: 50%;  /* Rendre l'image ronde */
+    width: 40px; /* Taille de l'image du profil */
+    border-radius: 50%; /* Rend l'image ronde */
 }
-
 
 .bar a, .bar a:visited, .bar a:hover, .bar a:active {
     color: white;  /* ou la couleur de votre choix */
     text-decoration: none;  /* Supprime le soulignage */
+    font-weight: bold;
+    font-size:x-large;
 }
 
 .bar-search {

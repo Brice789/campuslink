@@ -1,0 +1,35 @@
+.profile-container {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    margin: auto;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .header h1 {
+    color: #0056b3;
+  }
+  
+  .contacts, .events, .schedule {
+    margin-top: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .contacts p, .events ul, .schedule p {
+    margin-left: 20px;
+  }
+  
+  .events ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  

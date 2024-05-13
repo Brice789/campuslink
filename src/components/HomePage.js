@@ -7,13 +7,13 @@ const HomePage = ({ events, news }) => {
   return (
     <div className="page-container">
       <div className="welcome-message">
-        Bienvenue sur notre calendrier
+        Bienvenue Sam sur votre calendrier
       </div>
       <div className="calendar-container">
         <MyCalendar events={events} />
       </div>
       <div className="news-container">
-        <Actualites news={news.slice(0, 4)} />  
+        <Actualites news={news.slice(0, 6)} />  
       </div>
     </div>
   );
