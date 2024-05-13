@@ -1,6 +1,7 @@
 .news-container {
+  margin-top: 2rem; /* Ajustez cette valeur selon vos besoins */
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto; /* Assure que la marge s'applique bien autour du conteneur */
   padding: 20px;
 }
 
@@ -11,7 +12,7 @@
 }
 
 .news-card {
-  width: calc(33% - 20px); /* Three items per row, adjust margin as necessary */
+  width: calc(33% - 20px); /* Ajuste selon la structure de grille souhaitée */
   margin-bottom: 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: transform 0.3s ease-in-out;

@@ -6,6 +6,8 @@ import HomePage from './components/HomePage';
 import NotesPage from './components/NotesPage';
 import Bar from './components/Bar';
 import Actualites from './components/Actualites';
+import Footer from './components/Footer'; // Assurez-vous que le chemin est correct
+
 
 function App() {
 
@@ -40,27 +42,39 @@ function App() {
   const news = [
     {
       id: 1,
-      title: "Titre de l'actualité 1",
+      title: "Rendez-vous avec le CISO de Amazon",
       date: "2023-05-01",
-      imageUrl: "/path/to/image1.jpg"
+      imageUrl: "/assets/Actu/man.jpg"
     },
     {
       id: 2,
-      title: "Titre de l'actualité 2",
+      title: "Journée Portes Ouvertes",
       date: "2023-05-02",
       imageUrl: "/assets/Actu/events.jpeg"
     },
     {
       id: 3,
-      title: "Titre de l'actualité 2",
+      title: "Visite de l'entreprise Gensler",
       date: "2023-05-02",
-      imageUrl: "/assets/Actu/events.jpeg"
+      imageUrl: "/assets/Actu/gens.jpeg"
     },
     {
       id: 4,
-      title: "Titre de l'actualité 2",
+      title: "Avoir des projets écologiques",
       date: "2023-05-02",
-      imageUrl: "/assets/Actu/events.jpeg"
+      imageUrl: "/assets/Actu/eco.jpeg"
+    },
+    {
+      id: 5,
+      title: "Avoir des projets écologiques",
+      date: "2023-08-02",
+      imageUrl: "/assets/Actu/eco.jpeg"
+    },
+    {
+      id: 6,
+      title: "Avoir des projets écologiques",
+      date: "2023-05-02",
+      imageUrl: "/assets/Actu/eco.jpeg"
     }
   ];
 
@@ -75,6 +89,7 @@ function App() {
           <Route path="/notes" element={<NotesPage />} />
           <Route path="/actualites" element={<Actualites news={news} />} />
         </Routes>
+        {/* <Footer />  */}
       </div>
     </Router>
   );

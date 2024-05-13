@@ -13,15 +13,7 @@ const HomePage = ({ events, news }) => {
         <MyCalendar events={events} />
       </div>
       <div className="news-container">
-        {/* <h2>Actualités Récentes</h2> */}
         <Actualites news={news.slice(0, 4)} />  
- 
-        {news.slice(0, 4).map((item, index) => (
-          <div key={index} className="news-item">
-            <h3>{item.title}</h3> {/* Assurez-vous que la structure de l'objet correspond à votre API */}
-            <p>{item.summary}</p>
-          </div>
-        ))}
       </div>
     </div>
   );
