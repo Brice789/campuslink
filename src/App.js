@@ -8,31 +8,61 @@ import Bar from './components/Bar';
 import Actualites from './components/Actualites';
 
 function App() {
-  const [news, setNews] = useState([]);
+
+  // const [news, setNews] = useState([]);
+  const [events, setEvents] = useState([]); // Ajoutez une gestion d'état pour les événements
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    fetch('http://localhost:1337/api/news2/')  // Make sure this URL matches your Strapi API endpoint
-      .then(response => {
-        if (!response.ok) { throw new Error(`HTTP error! status: ${response.status}`); }
-        return response.json();
-      })
-      .then(data => {
-        console.log(data);  // Console log to check the structure of your received data
-        // Adjust this according to your API response structure
-        setNews(data.data || []);  // Make sure you're setting the correct part of the response
-        setLoading(false);
-      })
-      .catch(error => {
-        console.error('Error fetching news', error);
-        setError(error.toString());
-        setLoading(false);
-      });
-  }, []);
+  // // Supposons que vous avez une fonction pour charger les événements similairement aux actualités
+  // useEffect(() => {
+  //   fetch('http://localhost:1337/api/news2/')  // Assurez-vous que l'URL correspond à votre point d'accès API
+  //     .then(response => {
+  //       if (!response.ok) { throw new Error(`HTTP error! status: ${response.status}`); }
+  //       return response.json();
+  //     })
+  //     .then(data => {
+  //       setNews(data.data || []);
+  //       // Supposons que vous chargiez les événements ici aussi
+  //       setEvents(data.events || []);
+  //       setLoading(false);
+  //     })
+  //     .catch(error => {
+  //       console.error('Error fetching data', error);
+  //       setError(error.toString());
+  //       setLoading(false);
+  //     });
+  // }, []);
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
+  // if (loading) return <div>Loading...</div>;
+  // if (error) return <div>Error: {error}</div>;
+
+  const news = [
+    {
+      id: 1,
+      title: "Titre de l'actualité 1",
+      date: "2023-05-01",
+      imageUrl: "/path/to/image1.jpg"
+    },
+    {
+      id: 2,
+      title: "Titre de l'actualité 2",
+      date: "2023-05-02",
+      imageUrl: "/assets/Actu/events.jpeg"
+    },
+    {
+      id: 3,
+      title: "Titre de l'actualité 2",
+      date: "2023-05-02",
+      imageUrl: "/assets/Actu/events.jpeg"
+    },
+    {
+      id: 4,
+      title: "Titre de l'actualité 2",
+      date: "2023-05-02",
+      imageUrl: "/assets/Actu/events.jpeg"
+    }
+  ];
 
   return (
     <Router>
@@ -40,7 +70,7 @@ function App() {
         <Bar />
         <Navbar />
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<HomePage events={events} news={news} />} />
           <Route path="/ecole" element={<Ecole />} />
           <Route path="/notes" element={<NotesPage />} />
           <Route path="/actualites" element={<Actualites news={news} />} />
