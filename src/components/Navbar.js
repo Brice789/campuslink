@@ -18,8 +18,8 @@ const Navbar = () => {
   ];
   const associationItems = [
     { label: "Plateforme des asssociations", path: "/communaute" },
-    { label: "Événements & News", path: "/evenements" },
-    { label: "Inscription JPO", path: "/projets" },
+    { label: "Événements & News", path: "/actualites" },
+    { label: "Inscription JPO", path: "/jpo" },
   ];
   const stage = [
     { label: "Alternance et stage", path: "/evenements" },

@@ -17,9 +17,9 @@ function ProfilePage() {
     <div className="profile-container">
       <div className="profile-header">
         <div className="profile-info">
-          <h1>Cléa Dumont</h1>
-          <p>Classe: 10B - Alternance: Non</p>
-          <p>Participation: Association des sciences</p>
+          <h1>Sam Altmann</h1>
+          <p>Classe: M1 Groupe 2  - Alternance: oui</p>
+          <p>Participation: Association des Alumni</p>
         </div>
         <div className="profile-photo">
           <div className="photo-container" onClick={() => document.getElementById('file-input').click()}>

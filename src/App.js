@@ -10,6 +10,7 @@ import Footer from './components/Footer'; // Assurez-vous que le chemin est corr
 import Absences from './components/Absences';
 import ProfilePage from './components/Profil';
 import Stage from './components/Stage'; // Assurez-vous que le chemin est correct
+import ActivitiesPage from './components/ActivitiesPage';
 
 function App() {
   const [events, setEvents] = useState([]);
@@ -52,6 +53,8 @@ function App() {
           <Route path="/actualites" element={<Actualites news={news} />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/stages" element={<Stage />} /> {/* Nouvelle route pour les stages */}
+          <Route path="/jpo" element={<ActivitiesPage />} /> {/* Nouvelle route pour les stages */}
+
         </Routes>
         {/* <Footer />  */}
       </div>

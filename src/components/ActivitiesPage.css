@@ -1,0 +1,77 @@
+.activities-page {
+    padding: 20px;
+  }
+  
+  .activity-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .activity-card h2 {
+    margin-top: 0;
+  }
+  
+  .activity-card form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .activity-card input[type="text"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .activity-card label {
+    margin-bottom: 10px;
+  }
+  
+  .activity-card .register-button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .activity-card .register-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .activity-card ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .activity-card li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .activity-card li button {
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .activity-card li button:hover {
+    background-color: #218838;
+  }
+  
+  .bonus-points {
+    font-weight: bold;
+    color: #b222ff;
+  }
+  
