@@ -1,34 +1,61 @@
 .absences-container {
-    width: 60%; /* Ajustez la taille pour moins d'espace */
-    margin: 20px auto;
-    border-radius: 10px; /* Bordures arrondies */
-    overflow: hidden; /* Cache les bordures intérieures pour maintenir la forme arrondie */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ombre pour un effet élégant */
-    background-color: #fff; /* Fond blanc pour le contraste */
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  th, td {
-    text-align: left;
-    padding: 8px;
-  }
-  
-  .color-indicator {
-    height: 10px;
-    width: 10px;
-    display: inline-block;
-    border-radius: 50%; /* Rend les indicateurs parfaitement ronds */
-  }
-  
-  tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
-  tr:hover {
-    background-color: #f1f1f1;
-  }
-  
+  width: 80%;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.color-indicator {
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+form {
+  display: flex;
+  align-items: center;
+}
+
+input[type="file"] {
+  margin-right: 10px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}

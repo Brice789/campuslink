@@ -6,7 +6,7 @@ import Dropdown from './DropdownMenu';
 const Navbar = () => {
   const scolariteItems = [
     { label: "Notes et crédits", path: "/notes" },
-    { label: "Absences", path: "/absences" },
+    { label: "Absences et retard", path: "/absences" },
     { label: "Évaluer l'enseignement", path: "/evaluation" },
     { label: "Mes Copies Scannées", path: "/copies" }
   ];
