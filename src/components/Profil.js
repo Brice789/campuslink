@@ -1,31 +1,56 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Profil.css'; // Assure-toi que ce fichier est correctement lié
 
 function ProfilePage() {
+  const [profilePic, setProfilePic] = useState('/path/to/default-profile-pic.jpg'); // Chemin par défaut de l'image de profil
+
+  const handleProfilePicChange = (event) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setProfilePic(reader.result);
+    };
+    reader.readAsDataURL(file);
+  };
+
   return (
     <div className="profile-container">
-      <div className="header">
-        <img src="/path/to/profile-pic.jpg" alt="Profil" className="profile-pic" />
-        <h1>Cléa Dumont</h1>
-        <p>Professeur principal - Collège Jules Verne</p>
+      <div className="profile-header">
+        <div className="profile-info">
+          <h1>Cléa Dumont</h1>
+          <p>Classe: 10B - Alternance: Non</p>
+          <p>Participation: Association des sciences</p>
+        </div>
+        <div className="profile-photo">
+          <div className="photo-container" onClick={() => document.getElementById('file-input').click()}>
+            <img src={profilePic} alt="Profil" />
+            <input id="file-input" type="file" onChange={handleProfilePicChange} accept="image/*" hidden />
+          </div>
+        </div>
       </div>
-      <div className="contacts">
+      <div className="contacts-legal">
         <h2>Contacts Légaux</h2>
-        <p>Mme Michèle Dumas - Tel: 0123456789</p>
-        <p>M. Julien Duchamp - Tel: 9876543210</p>
+        <div className="contact">
+          <p>Mme Michèle Dumas - Tel: 0123456789</p>
+          <button className="sms-button">Envoyer SMS</button>
+        </div>
+        <div className="contact">
+          <p>M. Julien Duchamp - Tel: 9876543210</p>
+          <button className="sms-button">Envoyer SMS</button>
+        </div>
       </div>
-      <div className="events">
-        <h2>Événements</h2>
-        <ul>
-          <li>Absences à justifier: 2</li>
-          <li>Retards</li>
-          <li>Sanctions et détails</li>
-        </ul>
-      </div>
-      <div className="schedule">
-        <h2>Emploi du temps</h2>
-        <p>Lundi: Mathématiques, Histoire</p>
-        <p>Mardi: Sciences, Langues</p>
+      <div className="academic-details">
+        <h2>Détails Académiques</h2>
+        <div className="semester">
+          <h3>1er Semestre</h3>
+          <p>Absences: 4 - Justifiées: 2</p>
+          <p>Retards: 3</p>
+        </div>
+        <div className="semester">
+          <h3>2ème Semestre</h3>
+          <p>Absences: 2 - Justifiées: 1</p>
+          <p>Retards: 1</p>
+        </div>
       </div>
     </div>
   );

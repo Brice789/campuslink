@@ -24,7 +24,7 @@ const Navbar = () => {
   const stage = [
     { label: "Alternance et stage", path: "/evenements" },
     { label: "Suivi et évaluation", path: "/projets" },
-    { label: "Offre de Stage", path: "/communaute" }
+    { label: "Offre de Stage", path: "/stages" }
   ];
   const aide = [
     { label: "Ressources", path: "/evenements" },
