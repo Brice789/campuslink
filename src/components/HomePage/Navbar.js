@@ -1,5 +1,6 @@
+// Navbar.js
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Dropdown from './DropdownMenu';
 
@@ -13,11 +14,11 @@ const Navbar = () => {
   const ecoleItems = [
     { label: "Portail International", path: "/programmes" },
     { label: "Carreer Center Alumni", path: "/administration" },
-    { label: "Sales Libres", path: "/ressources" },
-    { label: "Réagir aux discriminations", path: "/ressources" },
+    { label: "Salles Libres", path: "/ressources" },
+    { label: "Réagir aux discriminations", path: "/reagir" },
   ];
   const associationItems = [
-    { label: "Plateforme des asssociations", path: "/communaute" },
+    { label: "Plateforme des associations", path: "/communaute" },
     { label: "Événements & News", path: "/actualites" },
     { label: "Inscription JPO", path: "/jpo" },
   ];
@@ -34,13 +35,12 @@ const Navbar = () => {
   return (
     <nav>
       <ul>
-        <li><Link to="/">Accueil</Link></li>
+        <Dropdown title="Accueil" items={[]} redirectTo="/" />
         <Dropdown title="Scolarité" items={scolariteItems} />
         <Dropdown title="École" items={ecoleItems} />
         <Dropdown title="Association" items={associationItems} />
         <Dropdown title="Alternance" items={stage} />
         <Dropdown title="Aide" items={aide} />
-
       </ul>
     </nav>
   );

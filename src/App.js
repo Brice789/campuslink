@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Ecole from './components/Ecole';
-import Navbar from './components/Navbar';
-import HomePage from './components/HomePage'; 
-import NotesPage from './components/NotesPage';
-import Bar from './components/Bar';
-import Actualites from './components/Actualites';
+import Navbar from './components/HomePage/Navbar';
+import HomePage from './components/HomePage/HomePage'; 
+import NotesPage from './components/Scolarite/NotesPage';
+import Bar from './components/HomePage/Bar';
+import Actualites from './components/Ecole/Actualites';
 // import Footer from './components/Footer'; // Assurez-vous que le chemin est correct
-import Absences from './components/Absences';
+import Absences from './components/Scolarite/Absences';
 import ProfilePage from './components/Profil';
-import Stage from './components/Stage'; // Assurez-vous que le chemin est correct
-import ActivitiesPage from './components/ActivitiesPage';
+import Stage from './components/Alternance/Stage'; // Assurez-vous que le chemin est correct
+import ActivitiesPage from './components/Association/ActivitiesPage';
+import Evaluation from './components/Scolarite/Evaluation';
 
 function App() {
   const [events, setEvents] = useState([]);
@@ -54,6 +55,8 @@ function App() {
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/stages" element={<Stage />} /> {/* Nouvelle route pour les stages */}
           <Route path="/jpo" element={<ActivitiesPage />} /> {/* Nouvelle route pour les stages */}
+          <Route path="/evaluation" element={<Evaluation />} /> {/* Nouvelle route pour les stages */}
+
 
         </Routes>
       </div>

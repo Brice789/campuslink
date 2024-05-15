@@ -1,13 +1,13 @@
 import React from 'react';
 import MyCalendar from './Calendar'; // Vérifiez le chemin
-import Actualites from './Actualites';
+import Actualites from '../Ecole/Actualites';
 import './HomePage.css'; // Assurez-vous que le chemin vers le fichier CSS est correct
 
 const HomePage = ({ events, news }) => {
   return (
     <div className="page-container">
       <div className="welcome-message">
-        Bienvenue Sam sur votre calendrier
+        Bienvenue Sam sur CampusLink
       </div>
       <div className="calendar-container">
         <MyCalendar events={events} />

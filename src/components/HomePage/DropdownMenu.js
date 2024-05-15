@@ -1,22 +1,29 @@
+// DropdownMenu.js
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './DropdownMenu.css';
 
-const Dropdown = ({ title, items }) => {
+const Dropdown = ({ title, items, redirectTo }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
-  // Toggle dropdown visibility
   const toggleDropdown = () => setIsOpen(!isOpen);
+
+  const handleClick = (e) => {
+    if (redirectTo) {
+      navigate(redirectTo);
+    } else {
+      e.preventDefault();
+      toggleDropdown();
+    }
+  };
 
   return (
     <li className="dropdown" onMouseEnter={() => setIsOpen(true)} onMouseLeave={() => setIsOpen(false)}>
-      <a href="/" className="dropdown-toggle" onClick={(e) => {
-        e.preventDefault(); // Prévenir le comportement par défaut
-        toggleDropdown();
-      }}>
-        {title} <span>▼</span>
-      </a>
-      {isOpen && (
+      <button className="dropdown-toggle nav-link" onClick={handleClick}>
+        {title} {items.length > 0 && <span>▼</span>}
+      </button>
+      {isOpen && items.length > 0 && (
         <ul className="dropdown-content">
           {items.map((item, index) => (
             <li key={index}><Link to={item.path}>{item.label}</Link></li>
