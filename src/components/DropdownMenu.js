@@ -10,10 +10,12 @@ const Dropdown = ({ title, items }) => {
 
   return (
     <li className="dropdown" onMouseEnter={() => setIsOpen(true)} onMouseLeave={() => setIsOpen(false)}>
-      <a href="#" className="dropdown-toggle" onClick={(e) => {
-        e.preventDefault(); // Prévenir le comportement par défaut du lien
+      <a href="/" className="dropdown-toggle" onClick={(e) => {
+        e.preventDefault(); // Prévenir le comportement par défaut
         toggleDropdown();
-      }}>{title} <span>▼</span></a>
+      }}>
+        {title} <span>▼</span>
+      </a>
       {isOpen && (
         <ul className="dropdown-content">
           {items.map((item, index) => (

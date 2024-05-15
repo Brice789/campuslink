@@ -6,7 +6,7 @@ import HomePage from './components/HomePage';
 import NotesPage from './components/NotesPage';
 import Bar from './components/Bar';
 import Actualites from './components/Actualites';
-import Footer from './components/Footer'; // Assurez-vous que le chemin est correct
+// import Footer from './components/Footer'; // Assurez-vous que le chemin est correct
 import Absences from './components/Absences';
 import ProfilePage from './components/Profil';
 import Stage from './components/Stage'; // Assurez-vous que le chemin est correct
@@ -56,7 +56,6 @@ function App() {
           <Route path="/jpo" element={<ActivitiesPage />} /> {/* Nouvelle route pour les stages */}
 
         </Routes>
-        {/* <Footer />  */}
       </div>
     </Router>
   );

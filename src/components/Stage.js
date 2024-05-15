@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Stage.css'; // Assurez-vous que le chemin vers le fichier CSS est correct
 
 const Stage = () => {
-    const [stages, setStages] = useState([
+    const [stages] = useState([
         // Ajouter ici les données de stage complètes
         {
             date: '2023-2024',
