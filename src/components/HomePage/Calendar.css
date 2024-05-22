@@ -1,0 +1,39 @@
+.big-calendar {
+    height: 90vh;
+  }
+  
+  .legend {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .legend-item {
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .legend-color {
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    border-radius: 50px;
+  }
+  
+  .legend-color.presentiel {
+    background-color: #3174ad;
+  }
+  
+  .legend-color.distanciel {
+    background-color: #08591C;
+  }
+  
+  .legend-color.exam {
+    background-color: rgba(255, 0, 0, 0.588);
+  }
+  
+  .legend-color.obligatoire {
+    background-color: rgb(116, 51, 116);
+  }
+  

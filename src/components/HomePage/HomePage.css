@@ -28,3 +28,23 @@
     padding: 10px 0; /* Un peu de padding autour du texte */
   }
   
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 200px); /* Adjust the 200px based on your header and footer height */
+  }
+  
+  .welcome-message {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 24px;
+  }
+  
+  .calendar-container {
+    flex: 1;
+  }
+  
+  .news-container {
+    padding: 20px;
+  }
+  

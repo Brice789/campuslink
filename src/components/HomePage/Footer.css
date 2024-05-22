@@ -1,33 +1,23 @@
-/* Appliquez ce style à la racine ou au conteneur principal de l'application */
-.root-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Utilisez la hauteur de la fenêtre pour étendre le contenu */
-    justify-content: space-between; /* Espace entre le contenu principal et le footer */
-  }
-  
-  .news-container {
-    margin-top: 2rem; /* Ajustez cette valeur selon vos besoins */
-    margin-bottom: 4rem; /* Ajoutez un espace avant le footer */
-  }
-  
-  footer {
-    background-color: #353535;
-    color: white;
-    padding: 1rem 2rem;
-    text-align: center;
-  }
-  
-  /* Autres styles du footer */
-  footer h2 {
-    font-family: "Shrikhand", sans-serif;
-    font-weight: 500;
-    padding: 1rem 0;
-  }
-  
-  footer p, footer a {
-    padding: 0.2rem;
-    text-decoration: none;
-    color: white; /* Assure que le texte des liens reste blanc */
-  }
-  
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

@@ -1,17 +1,14 @@
 import React from 'react';
-import './Footer.css'; // Assurez-vous de créer ce fichier CSS et d'y ajouter les styles
+import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer>
-      <h2>CampusLink</h2>
-      <p>
-        <i className="fas fa-hands-helping"></i> Devenir partenaire
-      </p>
-      <p>Mentions légales</p>
-      <p>
-        <a href="mailto:ohmyfood@gmail.com">Contact</a>
-      </p>
+    <footer className="footer">
+      <div className="footer-container">
+        <a href="/devenir-partenaire">Devenir partenaire</a>
+        <a href="/mentions-legales">Mentions légales</a>
+        <a href="/contact">Contact</a>
+      </div>
     </footer>
   );
 };

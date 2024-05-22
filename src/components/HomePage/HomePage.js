@@ -1,7 +1,7 @@
 import React from 'react';
-import MyCalendar from './Calendar'; // Vérifiez le chemin
+import MyCalendar from './Calendar';
 import Actualites from '../Ecole/Actualites';
-import './HomePage.css'; // Assurez-vous que le chemin vers le fichier CSS est correct
+import './HomePage.css';
 
 const HomePage = ({ events, news }) => {
   return (
